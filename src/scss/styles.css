@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  background: rgb(32, 32, 32);
+  height: 100%;
+}
+
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 3vh;
+}
+
+.navbar h1 {
+  color: white;
+}
+
+.score-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1vw;
+}
+
+.score-container div {
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 9999px;
+  padding: 2vh;
+}
+
+.score-container div p {
+  color: rgb(0, 0, 0);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  height: 100%;
+  padding: 5vh;
+  gap: 2vw;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.card-grid div {
+  -webkit-animation: fadeIn 300ms ease-in-out;
+          animation: fadeIn 300ms ease-in-out;
+  height: 33vh;
+  background: rgb(0, 0, 0);
+  border-radius: 2vw;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  position: relative !important;
+  overflow: hidden;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.card-grid div img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+}
+
+.card-grid div:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.gradient-overlay {
+  position: absolute !important;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)) !important;
+  width: 100%;
+  height: 13vh !important;
+  border-radius: 0px !important;
+  top: 20vh;
+  z-index: 1;
+  box-shadow: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 2vh;
+}
+
+.gradient-overlay p {
+  color: white;
+  font-size: 2.5vh;
+}
+
+ 
